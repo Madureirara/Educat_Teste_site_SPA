@@ -1,0 +1,87 @@
+/* Garantir que o fundo ocupe toda a página e zere as margens/padding padrões */
+html,
+body {
+  height: 100%; /* Garantir que a altura ocupe toda a tela */
+  margin: 0; /* Zerar margens */
+  padding: 0; /* Zerar padding */
+  background-color: #f5f5f5; /* Cor de fundo da página */
+}
+
+/* Garantir que o #root ocupe 100% da altura disponível */
+#root {
+  width: 100%; /* Ocupar 100% da largura da tela */
+  height: 100%; /* Ocupar 100% da altura da tela */
+  padding: 0 2rem; /* Pode manter padding lateral, se necessário */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  background-color: #f5f5f5; /* Mesma cor de fundo */
+}
+
+/* Certifique-se de que o conteúdo principal ocupe o restante da tela */
+.app,
+.home,
+.post-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-grow: 1; /* Garante que o conteúdo ocupe o restante da altura */
+}
+
+/* Estilo dos botões e cards */
+button,
+.navigate-button {
+  background-color: #6200ee;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover,
+.navigate-button:hover {
+  background-color: #3700b3;
+}
+
+/* Outros estilos para manter o layout organizado */
+.post-form {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input,
+textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.post-items {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.post-item {
+  background-color: #f0f0f0;
+  border: 1px solid #e1e1e1;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 12px;
+  text-align: left;
+}
