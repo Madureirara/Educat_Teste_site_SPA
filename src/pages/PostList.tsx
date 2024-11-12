@@ -98,9 +98,9 @@ const PostList: React.FC = () => {
       <ul className="post-items">
         {courses.map((post) => (
           <li key={post.id} className="post-item">
-            <h2>Noe do curso:{post.title}</h2>
-            {/* <p>Descrição do curso{post.content}</p> */}
-            {/* <p>Ator do curso: {post.author}</p> */}
+            <h2>Nome do curso: {post.title}</h2>
+            {<p>Descrição do curso: {post.content}</p>}
+            {<p>Ator do curso: {post.author}</p>}
             <button onClick={async () => await deleteCourse(post?.id)}>
               Excluir
             </button>
